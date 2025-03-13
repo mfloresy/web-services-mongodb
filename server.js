@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(cors())
 PORT = 8080
 
-app.get('/', require('./routes'))
+app.use('/', require('./routes'))
 
 mongodb.init((err) => {
     if (err) {
